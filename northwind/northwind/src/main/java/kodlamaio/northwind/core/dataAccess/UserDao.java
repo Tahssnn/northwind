@@ -1,0 +1,11 @@
+package kodlamaio.northwind.core.dataAccess;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import kodlamaio.northwind.core.entities.User;
+
+public interface UserDao extends JpaRepository<User, Integer> {
+
+	//kullanıcıya mail ile ulaşmak istiyoruz.
+	User findByEmail(String email);
+}
